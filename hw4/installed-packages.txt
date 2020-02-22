@@ -1,0 +1,6 @@
+pip install jupyter
+pip install numpy
+pip install matplotlib
+pip install scipy
+pip install pillow
+pip install future
