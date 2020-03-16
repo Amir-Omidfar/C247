@@ -102,11 +102,11 @@ def dataloader_setup(X_train_valid, y_train_valid, X_test, y_test, batch_size=32
     train_loader = DataLoader(train_dataset, batch_size)
 
     # load validation dataset
-    val_dataset = Dataset(Xval, yval, transform=transformations)
+    val_dataset = Dataset(Xval, yval)
     val_loader = DataLoader(val_dataset, numVal)
 
     # load test dataset
-    test_dataset = Dataset(Xtest, ytest, transform=transformations)
+    test_dataset = Dataset(Xtest, ytest)
     test_loader = DataLoader(test_dataset, len(test_dataset))
 
     # package up
