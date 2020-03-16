@@ -93,7 +93,10 @@ def dataloader_setup(X_train_valid, y_train_valid, X_test, y_test, batch_size=32
 
     # transformations
     transformations = transforms.Compose([
-                        transforms.RandomErasing(),
+                        transforms.RandomErasing(p=.99,
+                                              	scale=(.02,.08),
+                                              	ratio=(.025,.026),
+                                              	value=0),
                         AddGaussianNoise(mean=0., std=1.),
                       ])
 
